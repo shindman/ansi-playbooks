@@ -557,7 +557,7 @@ cat nrpe.yml
       when: ansible_os_family == 'RedHat' and
             pkg.results[0].yumstate != 'installed'
 
-    - name: Copying check_local_dns_latency to Remote.
+    - name: Copying file to Remote.
       copy:
         src: /backup/shellscript.sh
         dest: /usr/lib64/nagios/plugins/ 
